@@ -57,15 +57,30 @@ function middlePhase(){
 
 function thirdPhase(){
     let tl = gsap.timeline();
-    tl.to("#leading-tile-3", {duration:0.5, y:"-=1", rotation:154});
+    tl.to("#leading-tile-3", {duration:0.2, y:"-=0"})
+    .to("#leading-tile-3", {duration:0.3,  rotation:160}, "start")
+    .to("#s-draw_2", {duration:0.3, x:"-=214"}, "start" )
+    .to(".second-half", {duration: 0.3, alpha:1}, "start");
 
   return tl;
+
+}
+
+function lastPhase(){
+    let tl = gsap.timeline();
+    tl.from("#ball-1", {duration:0.5, y:"-=700", alpha:0})
+    .to("#ball-1", {duration:0.2, y:"+=10"})
+    .to("#leading-tile-3", {duration:0.3,  rotation:154, fill:"#F7B0BE"})
+    ;
+
+    return tl;
 
 }
 
 mainTL.add(drawW())
 .add(middlePhase())
 .add(thirdPhase())
+.add(lastPhase())
 ;
 
 
