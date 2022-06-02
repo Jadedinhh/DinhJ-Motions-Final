@@ -47,15 +47,25 @@ function middlePhase(){
        .to("#s-draw_2", {duration: 0.5, x:"+=50",  ease:"power1.out"}, "run")
        .to("#leading-tile-3", {duration:0.5, rotation:251})
        .to("#leading-tile-3", {duration:0.5, y:"40", ease:"Bounce.easeOut"},"-=0.1")
-       .to("#w-draw_2", {duration: 0.5, x:"-=193",  ease:"power1.out"}, "-=0.1")
-       .to("#s-draw_2", {duration: 0.5, x:"+=193",  ease:"power1.out"}, "-=0.1");
+       .to("#w-draw_2", {duration: 0.3, x:"-=193",  ease:"power1.out"}, "go")
+       .to("#s-draw_2", {duration: 0.3, x:"+=193",  ease:"power1.out"}, "go")
+       .to(".first-half", {duration: 0.3, alpha:1}, "go");
 
     return tl;
 
 }
 
+function thirdPhase(){
+    let tl = gsap.timeline();
+    tl.to("#leading-tile-3", {duration:0.5, y:"-=1", rotation:154});
+
+  return tl;
+
+}
+
 mainTL.add(drawW())
 .add(middlePhase())
+.add(thirdPhase())
 ;
 
 
