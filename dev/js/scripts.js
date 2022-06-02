@@ -57,7 +57,7 @@ function middlePhase(){
 
 function thirdPhase(){
     let tl = gsap.timeline();
-    tl.to("#leading-tile-3", {duration:0.2, y:"-=0"})
+    tl.to("#leading-tile-3", {duration:0.2, y:"-=10"})
     .to("#leading-tile-3", {duration:0.3,  rotation:160}, "start")
     .to("#s-draw_2", {duration:0.3, x:"-=214"}, "start" )
     .to(".second-half", {duration: 0.3, alpha:1}, "start");
@@ -66,12 +66,28 @@ function thirdPhase(){
 
 }
 
+
+
+
 function lastPhase(){
     let tl = gsap.timeline();
-    tl.from("#ball-1", {duration:0.5, y:"-=700", alpha:0})
+    tl.from("#ball-1", {duration:0.5, y:"-=700", opacity:0})
     .to("#ball-1", {duration:0.2, y:"+=10"})
     .to("#leading-tile-3", {duration:0.3,  rotation:154, fill:"#F7B0BE"})
-    ;
+    .to("#ball-1", {duration:0.5, y:"-=300"})
+    .to("#ball-1", {duration:0.5, motionPath:{
+        path:"#ball-path1",
+        align:"#ball-path1",
+        autoRotate: true,
+        alignOrigin:[0.5, 0.5]
+    }}, "i")
+    .to("#ball-2", {duration:0.5, alpha:1, motionPath:{
+        path:"#ball-path2",
+        align:"#ball-path2",
+        autoRotate: true,
+        alignOrigin:[0.5, 0.5]
+    }}, "i")
+    .to(".first-half, .second-half", {duration:0.5, fill:"#F7B0BE" });
 
     return tl;
 

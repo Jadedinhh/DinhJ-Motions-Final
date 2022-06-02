@@ -435,7 +435,7 @@ textarea {
   align-items: center;
   height: 100%;
 }
-#logo-container #ball-path1, #logo-container #ball-path2, #logo-container #ball-1, #logo-container #ball-2, #logo-container #leading-tile-2, #logo-container #leading-tile-3 {
+#logo-container #ball-path1, #logo-container #ball-path2, #logo-container #ball-2, #logo-container #leading-tile-2, #logo-container #leading-tile-3 {
   opacity: 0;
 }
 #logo-container .first-half, #logo-container .second-half, #logo-container .markup {
