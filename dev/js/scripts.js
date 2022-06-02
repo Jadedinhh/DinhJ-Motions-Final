@@ -9,3 +9,11 @@ gsap.registerPlugin(CustomEase, DrawSVGPlugin, GSDevTools, MorphSVGPlugin, Motio
 
 
 const mainTL = gsap.timeline({});
+
+
+function drawW(){
+
+}
+
+
+GSDevTools.create();
