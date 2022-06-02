@@ -12,8 +12,22 @@ const mainTL = gsap.timeline({});
 
 
 function drawW(){
+    let tl = gsap.timeline();
 
+
+    tl.from("#leading-tile", {duration:0.5, y:"-=700", alpha:0})
+    .from("#w-draw_2", {duration:0.7, drawSVG:"0%"})
+    ;
+
+    return tl;
 }
+
+
+
+mainTL.add(drawW())
+
+
+
 
 
 GSDevTools.create();
