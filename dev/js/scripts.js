@@ -73,8 +73,8 @@ function lastPhase(){
     let tl = gsap.timeline();
     tl.from("#ball-1", {duration:0.5, y:"-=700", opacity:0})
     .to("#ball-1", {duration:0.2, y:"+=10"})
-    .to("#leading-tile-3", {duration:0.3,  rotation:154, fill:"#F7B0BE"})
-    .to("#ball-1", {duration:0.5, y:"-=300"})
+    .to("#leading-tile-3", {duration:0.3,  rotation:154, fill:"#F7B0BE"}, "tilt")
+    .to("#ball-1", {duration:0.5, y:"-=300"}, "tilt")
     .to("#ball-1", {duration:0.5, motionPath:{
         path:"#ball-path1",
         align:"#ball-path1",
