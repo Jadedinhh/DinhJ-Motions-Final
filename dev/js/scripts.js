@@ -89,7 +89,14 @@ function lastPhase(){
     }, ease:"Bounce.easeOut"}, "i")
     .to("#ball-1", {duration:0.5, y:"-32"}, "comeup")
     .to("#ball-2", {duration:0.5, y:"-=19"}, "comeup")
-    .to(".first-half, .second-half", {delay:0.2, duration:0.5, fill:"#F7B0BE" });
+    .to(".first-half", {delay:0.2, duration:0.5, stagger:{
+        each: 0.2, 
+        from: "end"
+    }, fill:"#F7B0BE" }, "colorchange")
+    .to(".second-half", {delay:0.2, duration:0.5, stagger:{
+        each: 0.2, 
+        from: "end"
+    }, fill:"#F7B0BE" }, "colorchange");
 
     return tl;
 
