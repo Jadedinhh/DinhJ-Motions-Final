@@ -86,7 +86,9 @@ function lastPhase(){
         align:"#ball-path2",
         autoRotate: true,
         alignOrigin:[0.5, 0.5]
+        
     }}, "i")
+    .to 
     .to(".first-half, .second-half", {duration:0.5, fill:"#F7B0BE" });
 
     return tl;
