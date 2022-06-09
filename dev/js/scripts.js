@@ -75,21 +75,21 @@ function lastPhase(){
     .to("#ball-1", {duration:0.2, y:"+=10", ease:"Bounce.easeOut"})
     .to("#leading-tile-3", {duration:0.3,  rotation:154, fill:"#F7B0BE"}, "tilt")
     .to("#ball-1", {duration:0.5, y:"-=200"}, "tilt")
-    .to("#ball-1", {duration:0.5, motionPath:{
+    .to("#ball-1", {duration:0.7, motionPath:{
         path:"#ball-path1",
         align:"#ball-path1",
         autoRotate: true,
         alignOrigin:[0.5, 0.5]
-    }}, "i")
-    .to("#ball-2", {duration:0.5, alpha:1, motionPath:{
+    }, ease:"Bounce.easeOut"}, "i")
+    .to("#ball-2", {duration:0.7, alpha:1, motionPath:{
         path:"#ball-path2",
         align:"#ball-path2",
         autoRotate: true,
         alignOrigin:[0.5, 0.5]
-        
-    }}, "i")
-    .to 
-    .to(".first-half, .second-half", {duration:0.5, fill:"#F7B0BE" });
+    }, ease:"Bounce.easeOut"}, "i")
+    .to("#ball-1", {duration:0.5, y:"-32"}, "comeup")
+    .to("#ball-2", {duration:0.5, y:"-=19"}, "comeup")
+    .to(".first-half, .second-half", {delay:0.2, duration:0.5, fill:"#F7B0BE" });
 
     return tl;
 
