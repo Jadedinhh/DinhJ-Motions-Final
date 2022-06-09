@@ -18,7 +18,7 @@ function drawW(){
 
     tl.from("#leading-tile", {duration:0.5, y:"-=700", alpha:0})
     .from("#w-draw_2", {duration:0.7, drawSVG:"0%"})
-    .to("#leading-tile-2", {duratiob:0.5, alpha:1, motionPath:{
+    .to("#leading-tile-2", {duratiob:1, alpha:1, motionPath:{
         path:"#w-to-s",
         align:"#w-to-s",
         autoRotate: 90,
@@ -27,7 +27,7 @@ function drawW(){
     .to("#leading-tile", {duration:0, alpha:0})
     .to("#leading-tile-2", {duration:0, alpha:0})
     .from("#s-draw_2", {duration:0.7, drawSVG:"0%"})
-    .to("#leading-tile-3", {duratiob:0.5, alpha:1, motionPath:{
+    .to("#leading-tile-3", {duratiob:1, alpha:1, motionPath:{
         path:"#from-s",
         align:"#from-s",
         autoRotate: true,
