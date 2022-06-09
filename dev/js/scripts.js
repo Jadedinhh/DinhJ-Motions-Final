@@ -9,7 +9,7 @@ import { MotionPathHelper } from "gsap/MotionPathHelper";
 gsap.registerPlugin(MotionPathPlugin, CustomEase, DrawSVGPlugin, GSDevTools, MorphSVGPlugin, MotionPathHelper);
 
 
-const mainTL = gsap.timeline({});
+const mainTL = gsap.timeline({repeat:-1, repeatDelay:0.25});
 
 
 function drawW(){
@@ -74,7 +74,7 @@ function lastPhase(){
     tl.from("#ball-1", {duration:0.5, y:"-=700", opacity:0})
     .to("#ball-1", {duration:0.2, y:"+=10", ease:"Bounce.easeOut"})
     .to("#leading-tile-3", {duration:0.3,  rotation:154, fill:"#F7B0BE"}, "tilt")
-    .to("#ball-1", {duration:0.5, y:"-=200"}, "tilt")
+    .to("#ball-1", {duration:0.5, y:"-=255"}, "tilt")
     .to("#ball-1", {duration:0.7, motionPath:{
         path:"#ball-path1",
         align:"#ball-path1",
@@ -90,11 +90,11 @@ function lastPhase(){
     .to("#ball-1", {duration:0.5, y:"-32"}, "comeup")
     .to("#ball-2", {duration:0.5, y:"-=19"}, "comeup")
     .to(".first-half", {delay:0.2, duration:0.5, stagger:{
-        each: 0.2, 
+        each: 0.15, 
         from: "end"
     }, fill:"#F7B0BE" }, "colorchange")
     .to(".second-half", {delay:0.2, duration:0.5, stagger:{
-        each: 0.2, 
+        each: 0.15, 
         from: "end"
     }, fill:"#F7B0BE" }, "colorchange");
 
@@ -112,5 +112,5 @@ mainTL.add(drawW())
 
 
 
-// MotionPathHelper.create("#ball-2");
-GSDevTools.create();
+
+// GSDevTools.create();
