@@ -9,7 +9,7 @@ import { MotionPathHelper } from "gsap/MotionPathHelper";
 gsap.registerPlugin(MotionPathPlugin, CustomEase, DrawSVGPlugin, GSDevTools, MorphSVGPlugin, MotionPathHelper);
 
 
-const mainTL = gsap.timeline({repeat:-1, repeatDelay:0.25});
+const mainTL = gsap.timeline({repeat:-1, repeatDelay:1});
 
 
 function drawW(){
@@ -90,11 +90,11 @@ function lastPhase(){
     .to("#ball-1", {duration:0.5, y:"-32"}, "comeup")
     .to("#ball-2", {duration:0.5, y:"-=19"}, "comeup")
     .to(".first-half", {delay:0.2, duration:0.5, stagger:{
-        each: 0.15, 
+        each: 0.1, 
         from: "end"
     }, fill:"#F7B0BE" }, "colorchange")
     .to(".second-half", {delay:0.2, duration:0.5, stagger:{
-        each: 0.15, 
+        each: 0.1, 
         from: "end"
     }, fill:"#F7B0BE" }, "colorchange");
 
